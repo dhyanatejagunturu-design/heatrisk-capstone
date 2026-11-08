@@ -1,0 +1,42 @@
+# Project-wide settings. Code reads this through heatrisk.config.load_settings().
+
+countries:          # ISO 3166-1 alpha-2 as used in NUTS codes (Greece = EL)
+  DE: Germany
+  FR: France
+  IT: Italy
+  ES: Spain
+  EL: Greece
+
+cities:
+  berlin: {country: DE, name: Berlin}
+  paris:  {country: FR, name: Paris}
+  rome:   {country: IT, name: Rome}
+  madrid: {country: ES, name: Madrid}
+  athens: {country: EL, name: Athens}
+
+period:
+  train_start: 2015
+  train_end: 2025
+  test_year: 2026
+  summer_months: [6, 7, 8]
+  covid_years: [2020, 2021, 2022]
+
+satellite:
+  lst_years: [2022, 2023, 2024, 2025, 2026]
+  max_cloud_cover: 20      # percent, scene-level filter
+
+spatial:
+  crs: "EPSG:3035"         # ETRS89-LAEA, equal area
+  grid_size_m: 1000
+  nuts_year: 2021          # must match the Eurostat deaths table
+
+model:
+  max_lag_weeks: 2
+  baseline_years: 5        # naive baseline: mean of same ISO week over N previous years
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  external: data/external
+  data_log: data_log.csv

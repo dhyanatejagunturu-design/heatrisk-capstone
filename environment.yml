@@ -1,0 +1,63 @@
+# Heat Risk EU capstone - Python environment
+# Create:   conda env create -f environment.yml
+# Activate: conda activate heatrisk
+name: heatrisk
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  # Tabular processing and storage
+  - pandas
+  # Arrow 26.x macOS-arm64 builds on conda-forge link to a Homebrew lz4 path; stay on 25
+  - pyarrow=25
+  - libarrow=25
+  - python-duckdb
+  # Gridded climate and satellite data
+  - xarray
+  - netcdf4
+  - dask
+  - rioxarray
+  - rasterio
+  # Spatial
+  - geopandas
+  - shapely
+  - pyproj
+  # Statistics and ML
+  - statsmodels
+  - patsy
+  - scikit-learn
+  - lightgbm
+  - shap
+  - esda
+  - libpysal
+  # Experiment tracking
+  - mlflow
+  # Dashboard, charts, maps
+  - streamlit
+  - plotly
+  - folium
+  - streamlit-folium
+  # Testing and notebooks
+  - pytest
+  - ruff
+  - pyyaml
+  - jupyterlab
+  - ipykernel
+  # Dev tools: GitHub CLI, git hooks
+  - gh
+  - pre-commit
+  # Docker without Docker Desktop (Colima VM + Docker CLI).
+  # macOS one-time setup after creating the env:
+  #   codesign --sign - --force --entitlements scripts/macos/vz.entitlements "$CONDA_PREFIX/bin/limactl"
+  #   mkdir -p ~/.docker/cli-plugins
+  #   ln -sf "$CONDA_PREFIX/bin/docker-compose" "$CONDA_PREFIX/bin/docker-buildx" ~/.docker/cli-plugins/
+  - colima
+  - docker-cli
+  - docker-compose
+  - docker-buildx
+  - pip
+  - pip:
+      # Data download clients
+      - cdsapi
+      - eurostat
+      - pystac-client

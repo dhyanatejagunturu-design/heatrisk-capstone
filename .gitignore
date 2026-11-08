@@ -1,0 +1,46 @@
+# Data (kept out of git; rebuild from sources, see data_log.csv)
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+!data/**/.gitkeep
+*.nc
+*.tif
+*.tiff
+*.gpkg
+*.parquet
+*.duckdb
+*.zip
+
+# Experiment tracking
+mlruns/
+mlartifacts/
+mlflow.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Secrets and local config
+.env
+.cdsapirc
+.streamlit/secrets.toml
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Figures are generated; keep the folder only
+reports/figures/*
+!reports/figures/.gitkeep
