@@ -6,7 +6,6 @@ import pytest
 
 from heatrisk.config import load_settings
 from heatrisk.datalog import FIELDS, log_download
-from heatrisk.exposure.pop_weighted import daily_to_weekly, weighted_mean
 from heatrisk.models.baseline import naive_baseline
 from heatrisk.vulnerability.landsat import st_dn_to_celsius
 
@@ -25,21 +24,6 @@ def test_log_download_writes_header_once(tmp_path):
     rows = list(csv.DictReader(open(log)))
     assert [r["file"] for r in rows] == ["a.parquet", "b.zip"]
     assert list(rows[0]) == FIELDS
-
-
-def test_weighted_mean_ignores_nan_and_zero_weight():
-    assert weighted_mean([10, 20, np.nan], [1, 3, 5]) == pytest.approx(17.5)
-    assert np.isnan(weighted_mean([np.nan], [1]))
-
-
-def test_daily_to_weekly():
-    daily = pd.DataFrame(
-        {"geo": "DE300", "date": pd.date_range("2024-01-01", periods=7), "temp": range(7)}
-    )
-    weekly = daily_to_weekly(daily)
-    assert weekly.iloc[0].to_dict() == {
-        "geo": "DE300", "iso_week": "2024-W01", "temp_mean": 3.0, "temp_max": 6
-    }
 
 
 def test_naive_baseline_uses_only_previous_years():

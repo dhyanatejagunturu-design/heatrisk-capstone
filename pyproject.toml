@@ -15,7 +15,7 @@ authors = [
 ]
 # Full environment lives in environment.yml (conda-forge).
 # Listed here: only what the package itself needs to import and be tested.
-dependencies = ["numpy", "pandas", "pyyaml"]
+dependencies = ["numpy", "pandas", "pyyaml", "scipy", "xarray"]
 
 [project.optional-dependencies]
 test = ["pytest"]

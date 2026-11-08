@@ -11,10 +11,15 @@
 
 - [x] Repository, environment, CI
 - [ ] Accounts: Copernicus CDS, USGS EarthExplorer, Copernicus Data Space
-- [ ] Download Eurostat deaths, NUTS boundaries, E-OBS, 1 km census grid
-- [ ] Document schemas, missing weeks, region-code changes; start data log
-- [ ] Population-weighted weekly temperature per NUTS 3 region
-- [ ] First pytest data checks on real data
+- [x] Download Eurostat deaths, NUTS boundaries, E-OBS, 1 km census grid
+- [x] Document schemas, missing weeks, region-code changes; start data log
+      (`docs/data_quality_s1.md`, `docs/decisions.md`, `data_log.csv`)
+- [x] Population-weighted weekly temperature per region (NUTS 3; NUTS 1 for DE)
+- [x] First pytest data checks on real data (`tests/test_data_panel.py`)
+- [ ] Confirm with supervisor: Germany at NUTS 1; summer 2025 as main test
+
+**Deliverable:** `data/processed/panel_weekly.parquet`: 330 regions, 2010-W01 to
+2026-W28, 250,087 region-weeks (temperature to 2026-06-30).
 
 ## S2 checklist
 

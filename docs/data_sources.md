@@ -8,9 +8,10 @@ Every downloaded file goes in `data_log.csv` (source, version, download date).
 | Dataset | Provider | Use | Link |
 |---|---|---|---|
 | Deaths by week, sex, NUTS 3 (`demo_r_mwk3_t`) | Eurostat | Weekly mortality 2015–2026 | https://ec.europa.eu/eurostat/databrowser/view/demo_r_mwk3_t/default/table?lang=en |
-| E-OBS daily gridded observations | Copernicus C3S / ECA&D | Daily mean and max temperature, 0.1° | https://cds.climate.copernicus.eu/datasets/insitu-gridded-observations-europe |
+| E-OBS daily gridded observations (v34.0e, to 2026-06-30) | Copernicus C3S / ECA&D | Daily mean and max temperature, 0.1° | https://cds.climate.copernicus.eu/datasets/insitu-gridded-observations-europe (files used: https://knmi-ecad-assets-prd.s3.amazonaws.com/ensembles/data/Grid_0.1deg_reg_ensemble/) |
 | ERA5-Land hourly (optional) | Copernicus C3S | Humidity for apparent temperature | https://doi.org/10.24381/cds.e2161bac |
-| Census 2021 population grid, 1 km | Eurostat GISCO | Population weights, share aged 65+ | https://ec.europa.eu/eurostat/en/web/gisco/geodata/population-distribution/population-grids |
+| Census 2021 population grid, 1 km (V3) | Eurostat GISCO | Population weights, share aged 65+ | https://gisco-services.ec.europa.eu/census/2021/Eurostat_Census-GRID_2021_V3.zip |
+| Deaths by week, sex, 20-year age group (`demo_r_mwk3_20`) | Eurostat | Age-specific weekly deaths (used instead of `demo_r_mwk3_t`) | https://ec.europa.eu/eurostat/databrowser/view/demo_r_mwk3_20/default/table?lang=en |
 | Landsat 8/9 C2 L2 surface temperature | USGS | Summer LST at 30 m | https://www.usgs.gov/land-resources/nli/landsat/landsat-collection-2-level-2-science-products |
 | Sentinel-2 L2A | ESA / Copernicus Data Space | NDVI | https://dataspace.copernicus.eu |
 | Urban Atlas 2021 | Copernicus Land Monitoring Service | Land use, street trees, building height | https://land.copernicus.eu/en/news/urban-atlas-2021-product-update-is-now-available |

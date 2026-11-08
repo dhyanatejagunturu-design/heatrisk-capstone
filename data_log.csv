@@ -1,1 +1,7 @@
 file,source,dataset_id,version,downloaded_utc,url,notes
+demo_r_mwk3_20_20261108.parquet,Eurostat,demo_r_mwk3_20,2026-11-08,2026-11-08T16:02:26Z,https://ec.europa.eu/eurostat/databrowser/view/demo_r_mwk3_20/default/table?lang=en,"DE at NUTS 1, others NUTS 3; 2026 weeks provisional"
+NUTS_RG_01M_2021_3035_LEVL_1.geojson,Eurostat GISCO,NUTS_2021_LEVL_1,"2021, 1:1M",2026-11-08T16:04:51Z,https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_01M_2021_3035_LEVL_1.geojson,
+NUTS_RG_01M_2021_3035_LEVL_3.geojson,Eurostat GISCO,NUTS_2021_LEVL_3,"2021, 1:1M",2026-11-08T16:04:54Z,https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_01M_2021_3035_LEVL_3.geojson,
+Eurostat_Census-GRID_2021_V3.zip,Eurostat GISCO,Census-GRID_2021,V3,2026-11-08T16:06:09Z,https://gisco-services.ec.europa.eu/census/2021/Eurostat_Census-GRID_2021_V3.zip,"1 km grid, total population and age groups"
+tg_ens_mean_0.1deg_reg_v34.0e.nc,ECA&D / Copernicus C3S,E-OBS tg,v34.0e,2026-11-08T16:22:42Z,https://knmi-ecad-assets-prd.s3.amazonaws.com/ensembles/data/Grid_0.1deg_reg_ensemble/tg_ens_mean_0.1deg_reg_v34.0e.nc,daily mean temperature; ends 2026-06-30; subset 2010+ kept in data/interim
+tx_ens_mean_0.1deg_reg_v34.0e.nc,ECA&D / Copernicus C3S,E-OBS tx,v34.0e,2026-11-08T16:22:42Z,https://knmi-ecad-assets-prd.s3.amazonaws.com/ensembles/data/Grid_0.1deg_reg_ensemble/tx_ens_mean_0.1deg_reg_v34.0e.nc,daily maximum temperature; ends 2026-06-30; subset 2010+ kept in data/interim
